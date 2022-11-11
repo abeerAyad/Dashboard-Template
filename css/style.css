@@ -1,0 +1,595 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+body {
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "nav header header"
+        "nav contant contant";
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 80px 1fr;
+}
+
+header,
+nav {
+   
+    padding: 20px;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+
+main {
+    /* grid-area: contant; */
+}
+
+
+/* ###################### Header Style ###################### */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+form {
+    position: relative;
+}
+header input {
+    border-radius: 3px;
+    border: none;
+    border: 1px solid var(--grey-color);
+    padding: 8px;
+    width: 160px;
+    transition: width 0.3s ease-in-out;
+}
+
+header input:focus {
+    outline: none;
+    width: 185px;
+}
+
+header input::placeholder {
+    padding-left: 20px ;
+    font-size: 13px;
+}
+
+header form i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: var(--grey-color);
+    font-size: 13px;
+}
+
+.icons {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons img {
+    width: 80%;
+    height: 80%;
+}
+
+.icons .notifaction i {
+    font-size: 20px;
+    margin-right: 12px;
+    margin-top: 10px;
+    position: relative;
+}
+.icons .notifaction i::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -1px;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+
+/* ###################### nav Style ###################### */
+
+.navigations {
+    box-shadow: 0 0 10px #ddd;
+}
+.navigations .title {
+    margin-bottom: 30px;
+}
+.navigations .title h3 {
+     text-align: center;
+}
+
+.navigations .title .line {
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #000;
+    margin: 15px auto;
+    position: relative;
+}
+
+.line::before,
+.line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    border-radius: 50%;   
+    transform: translate(-50%,-50%);
+}
+
+.line::before {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+}
+
+.line::after {
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+}
+
+.navigations ul {
+    list-style: none;
+}
+
+.navigations ul li {
+    /* margin-top:10px; */
+    padding: 8px 20px;
+    border-radius: 4px;
+   transition: background 0.3 ease-in;
+}
+
+.navigations ul li:hover,
+.navigations ul li a:active {
+    background-color: #f6f6f6;;
+}
+
+.navigations ul li a {
+    font-size: 14px;
+    color: black;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navigations ul li a span {
+    padding-left: 3px ;
+}
+
+/* ###################### MAIN Style ###################### */
+
+main.content {
+    background-color: #f1f5f9;
+}
+
+.content h1 {
+    text-transform: capitalize;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+}
+
+.content h1::before ,
+.content h1::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 3px;
+    height: 3px;
+}
+.content h1::before {
+    width: 130px;
+    background-color: #fff;
+}
+.content h1::after {
+    width: 50px;
+    background-color: #000;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+    gap: 30px;
+    margin: 50px 20px 20px 20px;
+}
+
+
+
+.wrapper > div {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.wrapper .welcome {
+    padding: 0 0 10px 0;
+}
+.wrapper .welcome .intro {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 20px;
+}
+.title h2,
+.title h2  {
+    text-transform: capitalize;
+
+}
+.wrapper .welcome .intro img {
+  width: 200px;
+
+}
+
+.title span,
+.title span {
+    margin-left: 15px;
+    font-weight: 500;
+    color: #888;
+    text-transform: capitalize;
+}
+
+.wrapper .welcome img.avatar {
+    width: 65px;
+    height: 65px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    padding: 2px;
+    box-shadow: 0 0 5px #ddd;
+    margin-top: -32px;
+    margin-left: 20px;
+    
+
+}
+.wrapper .welcome .welcome-details {
+    padding: 20px 0;
+    border: 1px solid #eee;
+    border-left: 0;
+    border-right: 0;
+    margin-top: 15px;
+}
+.wrapper .welcome .welcome-details ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper .welcome .welcome-details ul li {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.wrapper .welcome .welcome-details ul li p {
+    margin-top: 5px;
+    color: #888;
+    font-size: 14px;
+}
+
+ .link {
+    background-color: var(--blue-color);
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 14px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin: 10px 20px 0px auto;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+ .link:hover,
+ .link:hover:active {
+    background-color: var(--blue-alt-color)
+ }
+
+
+
+form input,
+form textarea {
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+}
+.wrapper .quick .quick-details form input,
+.wrapper .quick .quick-details form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 20px 0;
+}
+
+/* Target Style */
+
+.target .target-content {
+    margin-top: 15px;
+}
+.target-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.target-details .icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue-color);
+}
+.target-details .icon i {
+    font-size: 18px;
+}
+
+.target-details .details {
+    margin-left: 20px;
+    flex: 1 1 0%;
+}
+.target-details .details>span {
+    font-size: 14px;
+    color: var(--grey-color);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.target-details .details p {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+
+.progress {
+    height: 5px;
+    border-radius: 10px;
+    background-color: #ddd;
+    position: relative;
+}
+
+.progress > span {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress > span span {
+    position: absolute;
+    bottom: 16px;
+    right: -16px;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.progress>span span::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent transparent;
+}
+
+.progress> .blue span::before {
+    border-top-color: var(--blue-color);
+}
+
+.progress >.orange span::before {
+    border-top-color: var(--orange-color);
+}
+
+.progress>.green span::before {
+    border-top-color: var(--green-color);
+}
+
+
+
+
+
+
+.tickets .card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.card .box {
+
+    border: 1px solid #ccc;
+    width: calc(50% - 20px);
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.card .box i {
+    font-size: 25px;
+}
+.card .box p {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.card .box span {
+    text-transform: capitalize;
+    font-size: 13px;
+    color: var(--grey-color);
+}
+
+
+.news-details {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    
+}
+
+.news-details:not(:last-child),
+.task-details:not(:last-child) {
+    padding-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+}
+
+.news-details img {
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.news-details .info {
+    margin-left: 15px;
+    flex: 1;
+}
+
+.news-details .info p,
+.tasks .task-details .info p {
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.news-details .info div,
+.tasks .task-details .info div {
+    font-size: 13px;
+    text-transform: capitalize;
+    color: var(--grey-color);
+    font-weight: 500;
+}
+
+.news-details .info p span,
+.news-details .info div span {
+    text-transform: uppercase;
+}
+
+.news .news-details .days {
+   background-color: #eee;
+   padding: 4px 10px;
+   border-radius: 10px;
+   text-transform: capitalize;
+   font-size: 13px;
+}
+
+.task-details {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.task-details i {
+    transition: color 0.3s ease-in-out;
+}
+
+.task-details i:hover {
+    color: var(--red-color);
+}
+.tasks .task-details .info div {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.task-details:nth-of-type(5) .info p,
+.task-details:nth-of-type(5) .info div {
+    text-decoration: line-through;
+}
+
+.task-details:nth-of-type(5) .info p {
+    color: #ccc;
+}
+
+.task-details:nth-of-type(5) .info div,
+.task-details:nth-of-type(5) i {
+    color: #ddd;
+}
+
+.c-blue {
+    color: var(--blue-color);
+}
+.blue {
+    background-color: var(--blue-color);
+}
+
+.c-orange {
+    color: var(--orange-color);
+}
+
+.orange {
+    background-color: var(--orange-color);
+}
+
+.c-green {
+    color: var(--green-color);
+}
+.green {
+    background-color: var(--green-color);
+}
+
+.c-red {
+    color: var(--red-color);
+}
+
+.alt-blue {
+    background-color: rgb(0 117 255 / 20%);;
+}
+
+.alt-orange {
+    background-color: rgb(245 158 11 / 20%);
+}
+
+.alt-green {
+    background-color: rgb(34 197 94 / 20%);
+}
