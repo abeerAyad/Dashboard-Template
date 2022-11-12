@@ -469,7 +469,8 @@ form textarea:focus {
 }
 
 
-.news-details {
+.news-details,
+.upload-details {
     display: flex;
     align-items: center;
     margin-top: 15px;
@@ -477,9 +478,10 @@ form textarea:focus {
 }
 
 .news-details:not(:last-child),
-.task-details:not(:last-child) {
-    padding-bottom: 15px;
-        border-bottom: 1px solid #ccc;
+.task-details:not(:last-child),
+.upload-details:not(:last-child) {
+    padding-bottom: 12px;
+        border-bottom: 1px solid #eee;
 }
 
 .news-details img {
@@ -488,21 +490,24 @@ form textarea:focus {
     border-radius: 10px;
 }
 
-.news-details .info {
+.news-details .info ,
+.upload-details .info{
     margin-left: 15px;
     flex: 1;
 }
 
 .news-details .info p,
-.tasks .task-details .info p {
+.tasks .task-details .info p,
+.upload-details .info p {
     text-transform: capitalize;
-    font-weight: 700;
-    margin-bottom: 8px;
+    font-weight: 600;
+    margin-bottom: 5px;
     font-size: 15px;
 }
 
 .news-details .info div,
-.tasks .task-details .info div {
+.tasks .task-details .info div,
+.upload-details .info div {
     font-size: 13px;
     text-transform: capitalize;
     color: var(--grey-color);
@@ -514,7 +519,9 @@ form textarea:focus {
     text-transform: uppercase;
 }
 
-.news .news-details .days {
+.news .news-details .days,
+.search-details span,
+.upload-details .size  {
    background-color: #eee;
    padding: 4px 10px;
    border-radius: 10px;
@@ -522,7 +529,8 @@ form textarea:focus {
    font-size: 13px;
 }
 
-.task-details {
+.task-details,
+.search-details {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
@@ -556,6 +564,25 @@ form textarea:focus {
     color: #ddd;
 }
 
+.search-details {
+    padding-bottom: 15px;
+}
+.search-details   h4 {
+    color: var(--grey-color);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.search-details .info p  {
+    font-weight: 500;
+}
+
+.search-details  span  {
+    font-size: 14px;
+}
+
+.upload-details img {
+    width: 40px;
+}
 .c-blue {
     color: var(--blue-color);
 }
