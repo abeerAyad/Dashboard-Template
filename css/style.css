@@ -685,6 +685,119 @@ form textarea:focus {
     border-left: 2px solid var(--red-color);
 }
 
+.info-post {
+    display: flex;
+    align-items: center;
+}
+.info-post img {
+    width: 60px;
+}
+.info-post div {
+    margin-left: 15px;
+}
+.info-post div p {
+    color: var(--grey-color);
+    font-weight: 600;
+}
+
+.latest .details-post {
+    font-weight: 600;
+    padding:  20px 0;
+    border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        margin-top: 20px;
+}
+
+.latest ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 0;
+}
+
+.latest li {
+    color: var(--grey-color);
+    font-weight: 500;
+}
+.social-details .twitter {
+    background-color: rgb(29 161 242 / 20%);
+}
+.social-details div {
+    margin-top: 25px;
+    padding: 15px;
+    position: relative;
+}
+.social-details  div i {
+    font-size: 2em;
+    color: white;
+    width: 52px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+.social-details div:hover i {
+    transform: rotate(6deg);
+}
+
+.social-details div span {
+    padding-left: 70px;
+    color: #1da1f2;
+}
+
+.social-details div a {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding:3px 8px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.social-details .facebook {
+    background-color: rgb(24 119 242 / 20%);
+}
+
+.social-details .youtube {
+    background-color: rgb(255 0 0 / 20%);
+}
+.social-details .youtube span {
+        color: #ff0000;
+}
+
+.social-details .linkedin {
+    background-color: rgb(0 119 181 / 20%);
+        color: #0077b5;
+}
+
+.social-details .linkedin {
+    color: #0077b5;
+}
+
+.social-details .twitter i,
+.social-details .twitter a {
+    background-color: #1da1f2;
+}
+.social-details .youtube i,
+.social-details .youtube a {
+    background-color: #ff0000;
+}
+
+.social-details .facebook i,
+.social-details .facebook a {
+    background-color: #1877f2;
+}
+
+.social-details .linkedin i,
+.social-details .linkedin a {
+    background-color: #0077b5;
+}
+
 
 .c-blue {
     color: var(--blue-color);
