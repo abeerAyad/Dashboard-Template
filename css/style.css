@@ -250,7 +250,6 @@ main.content {
     background-color: #eee;
     padding: 20px;
 }
-.title h2,
 .title h2  {
     text-transform: capitalize;
 
@@ -583,6 +582,110 @@ form textarea:focus {
 .upload-details img {
     width: 40px;
 }
+
+
+.last-projects {
+    position: relative;
+}
+.last-projects ul {
+    position: relative;
+}
+.last-projects ul::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #0d69d5;
+   margin-left: 11px;
+}
+.last-projects ul li {
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 25px;
+    position: relative;
+    margin-left: 30px;
+    
+}
+.last-projects ul li::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #fff;
+    outline: 2px solid #0d69d5;
+    z-index: 1;
+}
+.last-projects ul li.done::before {
+    background-color: var(--blue-color);
+}
+
+.last-projects ul li.current:before {
+    animation: change-color  1s infinite alternate;
+}
+@keyframes change-color {
+    0% {
+        background-color: none;
+    }
+    100% {
+        background-color: var(--blue-color);
+    }
+}
+
+.last-projects img {
+    width: 160px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.5;
+}
+
+.reminders ul li {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.reminders ul li > span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right:15px ;
+    
+}
+
+.reminders ul li > div {
+    padding-left: 15px;
+}
+.reminders ul li>div p {
+    font-weight: 500;
+    
+    
+}
+.reminders ul li > div span {
+    font-size: 13px;
+        color: var(--grey-color);
+}
+
+.reminders ul li > .b-blue   {
+    border-left: 2px solid var(--blue-color);
+}
+
+.reminders ul li>.b-green {
+    border-left: 2px solid var(--green-color);
+}
+
+.reminders ul li>.b-orange {
+    border-left: 2px solid var(--orange-color);
+}
+
+.reminders ul li>.b-red {
+    border-left: 2px solid var(--red-color);
+}
+
+
 .c-blue {
     color: var(--blue-color);
 }
@@ -607,6 +710,9 @@ form textarea:focus {
 
 .c-red {
     color: var(--red-color);
+}
+.red {
+    background-color: var(--red-color);
 }
 
 .alt-blue {
